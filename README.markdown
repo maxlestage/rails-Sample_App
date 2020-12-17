@@ -70,7 +70,7 @@ def titre
 end
 ```
 
-omme on peut le voir dans l'extrait 4.3. Notez en particulier le basculement de la variable d'instance @titre vers la méthode de l'helper titre (sans le signe arobase, @). En utilisant Autotest ou rspec spec/, vous devriez pouvoir vérifier que les tests du chapitre 3 réussissent toujours.
+comme on peut le voir dans l'extrait 4.3. Notez en particulier le basculement de la variable d'instance @titre vers la méthode de l'helper titre (sans le signe arobase, @). En utilisant Autotest ou rspec spec/, vous devriez pouvoir vérifier que les tests du chapitre 3 réussissent toujours.
 
 Extrait 4.3. Le layout du site de l'application exemple.`
 ```
