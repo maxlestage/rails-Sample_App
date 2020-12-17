@@ -57,6 +57,7 @@ app/helpers/application_helper.rb
 module ApplicationHelper
 
 # Retourner un titre basé sur la page.
+```
 def titre
     base_titre = "Simple App du Tutoriel Ruby on Rails"
         if @titre.nil?
@@ -66,3 +67,4 @@ def titre
         end
     end
 end
+`
