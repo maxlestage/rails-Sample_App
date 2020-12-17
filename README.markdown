@@ -47,3 +47,22 @@ Ici la règle :
 
 get "pages/home"
 … se charge de la requête pour l'URL /pages/home pour la page d'accueil (action home) dans le contrôleur Pages. Plus encore, en utilisant get nous nous arrangeons pour que la route réponde à la requête GET, qui est un des verbes HTTP fondamentaux supporté par le Hypertext Transfer Protocol (Box 3.1). Dans notre cas, cela signifie que lorsque nous générons une action home à l'intérieur du contrôleur Pages nous atteignons automatiquement une page à l'adresse /pages/home. Pour voir le résultat, « tuez » le serveur avec Ctrl-C, jouez la commande rails server, et naviguez alors à l'adresse /pages/home.
+
+
+Les helper:
+Une façon courante de traiter ce cas est de définir un helper (un « assistant », un « auxiliaire ». NdT), qui est une fonction conçue pour être utilisée avec les vues. Définissons un helper titre qui retourne une base de titre, « Simple App du Tutoriel Ruby on Rails », si aucune variable @titre n'est définie, et ajoute une barre verticale dans le cas où cette variable serait définie (extrait 4.2).1
+
+Extrait 4.2. Définir un helper de titre.
+app/helpers/application_helper.rb
+module ApplicationHelper
+
+# Retourner un titre basé sur la page.
+def titre
+    base_titre = "Simple App du Tutoriel Ruby on Rails"
+        if @titre.nil?
+        base_titre
+        else
+        "#{base_titre} | #{@titre}"
+        end
+    end
+end
